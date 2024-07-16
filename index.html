@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 800px;
+            margin: 2em auto;
+            padding: 1em;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 10px;
+        }
+
+        .explanation, .contextualization, .newsletter {
+            text-align: left;
+        }
+
+        h2 {
+            margin-top: 2em;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Conversor de Temperatura</h1>
+    </header>
+    <div class="container">
+        <label for="tempInput">Digite a temperatura:</label>
+        <input type="number" id="tempInput" placeholder="Ex: 25">
+        <button onclick="convert('C')">Celsius</button>
+        <button onclick="convert('F')">Fahrenheit</button>
+        <button onclick="convert('K')">Kelvin</button>
+        <p id="result"></p>
+    </div>
+    <div class="container explanation">
+        <h2>Como usar o site</h2>
+        <p>Digite a temperatura no campo fornecido e clique em um dos botões para converter a temperatura para a escala desejada: Celsius, Fahrenheit ou Kelvin. O resultado da conversão será exibido abaixo dos botões.</p>
+    </div>
+    <div class="container contextualization">
+        <h2>Contextualização das Escalas de Temperatura</h2>
+        <p><strong>Escala Celsius (°C):</strong> Criada por Anders Celsius em 1742, a escala Celsius é baseada no ponto de congelamento da água a 0 °C e no ponto de ebulição a 100 °C, sob pressão atmosférica normal.</p>
+        <p><strong>Escala Fahrenheit (°F):</strong> Desenvolvida por Daniel Gabriel Fahrenheit em 1724, a escala Fahrenheit define o ponto de congelamento da água a 32 °F e o ponto de ebulição a 212 °F, também sob pressão atmosférica normal.</p>
+        <p><strong>Escala Kelvin (K):</strong> Proposta por William Thomson (Lord Kelvin) em 1848, a escala Kelvin é usada principalmente em ciência e define o zero absoluto (0 K) como a temperatura mais baixa possível, onde as partículas têm mínima energia térmica. A escala Kelvin é uma extensão da escala Celsius, com a diferença de que 0 K é igual a -273,15 °C.</p>
+        <p><strong>Conversões:</strong></p>
+        <ul>
+            <li>De Celsius para Fahrenheit: (°C * 9/5) + 32</li>
+            <li>De Celsius para Kelvin: °C + 273.15</li>
+            <li>De Fahrenheit para Celsius: (°F - 32) * 5/9</li>
+            <li>De Fahrenheit para Kelvin: (°F - 32) * 5/9 + 273.15</li>
+            <li>De Kelvin para Celsius: K - 273.15</li>
+            <li>De Kelvin para Fahrenheit: (K - 273.15) * 9/5 + 32</li>
+        </ul>
+    </div>
+    <div class="container newsletter">
+        <h2>Inscreva-se para novidades</h2>
+        <p>Digite seu e-mail abaixo para receber novidades sobre futuros sites e projetos:</p>
+        <input type="email" id="emailInput" placeholder="Seu e-mail">
+        <button onclick="subscribe()">Inscrever-se</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
